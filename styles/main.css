@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+}
+
+html {background-color: #F6DCF5}
+body{
+    padding-left: 4em;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Quicksand', sans-serif;
+    background-image: radial-gradient(circle at center right, rgb(202, 57, 146),rgb(11, 5, 110));
+    color:white;
+
+}
+
+h1,h2,h3{
+    line-height: 1.2;
+    font-family: 'Heebo', sans-serif;
+    color: pink;
+}
+
+#aboutImage{
+    height:20em;
+}
+
+p{
+    max-width: 50em;
+}
+
+a{
+    color: pink;
+}
+
+a:hover{
+    color:black;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "head head"
+                         "nav main"
+                         "foot foot";
+    grid-template-columns: 1fr 4fr ;
+    grid-template-rows: auto auto 1fr auto ;
+}
+
+@media screen and (min-width:23.4em) {
+    body{
+        display: grid;
+        grid-template-areas: "head head"
+                             "nav main"
+                             "foot foot";
+        grid-template-rows: auto 1fr auto ;
+    }
+}
+
+body > *{
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body > header{
+    grid-area: head;
+   
+}
+
+body > nav{
+    grid-area: nav;
+    
+}
+
+body > nav ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+body > nav ul li{
+padding-right: 1rem;
+}
+
+body > main{
+    grid-area: main;
+   
+}
+
+body > footer{
+    grid-area: foot;
+   
+}
+
+header, footer {
+    padding-top: var( --vertical-space);
+    padding-bottom: var(--horizontal-space);
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+body#portfolio ul#portfolioitems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width:23.4em) {
+    body#portfolio ul#portfolioitems li {
+        flex-basis: 48%;
+        padding-right:2% ;
+    }
+    
+    body#portfolio ul#portfolioitems li img {
+    max-width: 100%;
+    }
+}
+
+
